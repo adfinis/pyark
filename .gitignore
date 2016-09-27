@@ -1,0 +1,9 @@
+*.swp
+*.pyc
+*.pyo
+__pycache__
+.deps/
+.venv/
+build/
+dist/
+pyark.egg-info/
