@@ -2,10 +2,12 @@
 Pyark
 =====
 
-|Travis| |License|
+|Travis| |PyPi| |License|
 
 .. |Travis| image:: https://img.shields.io/travis/adfinis-sygroup/pyark.svg?style=flat-square
    :target: https://travis-ci.org/adfinis-sygroup/pyark
+.. |PyPi| image:: https://img.shields.io/pypi/v/pyark.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/pyark
 .. |License| image:: https://img.shields.io/github/license/adfinis-sygroup/pyark.svg?style=flat-square
    :target: LICENSE
 
