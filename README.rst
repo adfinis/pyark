@@ -2,6 +2,13 @@
 Pyark
 =====
 
+|Travis| |License|
+
+.. |Travis| image:: https://img.shields.io/travis/adfinis-sygroup/pyark.svg?style=flat-square
+   :target: https://travis-ci.org/adfinis-sygroup/pyark
+.. |License| image:: https://img.shields.io/github/license/adfinis-sygroup/pyark.svg?style=flat-square
+   :target: LICENSE
+
 Pyark is a small python-based CLI tool, which allows you to interact with the
 CyberArk Enterprise Password Vault API.
 
