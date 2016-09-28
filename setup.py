@@ -34,7 +34,7 @@ setup(
                   "interact with the CyberArk Enterprise Password Vault API."),
     long_description = README_TEXT,
     keywords = "CyberArk, Password Vault, API, CLI",
-    url = "https://adfinis-sygroup.ch/",
+    url = "https://github.com/adfinis-sygroup/pyark",
     classifiers = [
         "Development Status :: 5 - Production/Stable",
         "Environment :: Console",
