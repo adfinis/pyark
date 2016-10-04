@@ -45,19 +45,39 @@ Get a list of available accounts:
 
 .. code:: shell
 
-   #TODO
+   $ pyark --base https://vault.example.com \
+           --apiuser foobar                 \
+           --apipassword supersecret42      \
+           account get                      \
+           --safe MySafe                    \
+           --keywords bruce
 
 Create a new account:
-
+ 
 .. code:: shell
 
-   #TODO
+   $ pyark --base https://vault.example.com \
+           --apiuser foobar                 \
+           --apipassword supersecret42      \
+           account create                   \
+           --safe MySafe                    \
+           --platformid TestPlatform        \
+           --accountname brucewayne         \
+           --address batcave.example.com    \
+           --username brucew                \
+           --password d4rkkn1ght
 
 Delete an existing account:
-
+ 
 .. code:: shell
 
-   #TODO
+   $ pyark --base https://vault.example.com \
+           --apiuser foobar                 \
+           --apipassword supersecret42      \
+           account delete                   \
+           --safe MySafe                    \
+           --accountname brucewayne         \
+           --keywords bruce
 
 Contributions
 =============
