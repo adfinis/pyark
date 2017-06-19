@@ -29,7 +29,7 @@ setup(
         "requests",
     ],
     author = "Adfinis SyGroup AG",
-    author_email = "https://adfinis-sygroup.ch/",
+    author_email = "info@adfinis-sygroup.ch",
     description = ("Pyark is a small python-based CLI tool, which allows you to "
                   "interact with the CyberArk Enterprise Password Vault API."),
     long_description = README_TEXT,
