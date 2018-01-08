@@ -89,18 +89,23 @@ class VaultConnector:
 
         return ret
 
-    def login(self, user, password):
+    def login(self, user, password, radius=False):
         """Login into CyberArk and get the session token.
 
         :param     user: Username used for the authentication
         :type      user: str
         :param password: Password used for the authentication
-        :type  password: str"""
+        :type  password: str
+        :param   radius: Enable/disable RADIUS authentication
+        :type    radius: bool"""
         logger.debug('Login called, will try to login as %s' % (user))
         params = {
             "username": user,
             "password": password
         }
+        if radius:
+            logger.debug('Enabling RADIUS authentication for login attempt')
+            params["useRadiusAuthentication"] = "true"
 
         ret = self.call(
             "POST",
@@ -320,6 +325,12 @@ def main(argv=None):
         type=str,
         required=True
     )
+    parser.add_argument(
+        '--useradiusauthentication',
+        '-ura',
+        help='Enable RADIUS authentication for login',
+        action='store_true'
+    )
     subparsers = parser.add_subparsers()
 
     # account parser
@@ -447,7 +458,9 @@ def main(argv=None):
     logger.addHandler(ch)
 
     vault = VaultConnector(args.base)
-    if (vault.login(args.apiuser, args.apipassword)):
+    if (vault.login(args.apiuser,
+                    args.apipassword,
+                    args.useradiusauthentication)):
         # run function for selected subparser
         if not args.func(vault, args):
             logger.error('Unable to complete CyberArk request')
