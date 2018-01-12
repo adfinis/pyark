@@ -22,6 +22,11 @@ Currently the following functionalities are supported:
 * Create accounts
 * Delete accounts
 
+Supported authentication methods:
+
+* CyberArk accounts (default)
+* RADIUS
+
 Requirements
 ============
 Make sure to have the following Python 3 dependencies installed before using the
