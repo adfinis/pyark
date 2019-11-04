@@ -462,7 +462,6 @@ def main(argv=None):
     if not args.apipassword:
         args.apipassword = getpass("Please enter password for {}: "
                                    .format(args.apiuser))
-    
     vault = VaultConnector(args.base)
     if (vault.login(args.apiuser,
                     args.apipassword,
