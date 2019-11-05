@@ -6,6 +6,7 @@ import argparse
 import json
 import logging
 import sys
+from getpass import getpass
 
 import requests
 
@@ -323,7 +324,8 @@ def main(argv=None):
         '-ap',
         help='CyberArk password used to login',
         type=str,
-        required=True
+        default=None,
+        required=False
     )
     parser.add_argument(
         '--useradiusauthentication',
@@ -457,6 +459,9 @@ def main(argv=None):
     ch.setFormatter(log_formatter)
     logger.addHandler(ch)
 
+    if not args.apipassword:
+        args.apipassword = getpass("Please enter password for {}: "
+                                   .format(args.apiuser))
     vault = VaultConnector(args.base)
     if (vault.login(args.apiuser,
                     args.apipassword,
